@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.czc.fastdfs.mapper.chen.FileUploadMapper">
+
+
+    <insert id="addMovieBean" parameterType="com.czc.fastdfs.bean.chen.MovieFileBean">
+
+        insert into pic_movie_info(movie_id, pic_path, comment_text)
+         VALUES (#{movieId , jdbcType=NUMERIC} ,
+          #{picPath , jdbcType=VARCHAR} ,
+          #{commentText , jdbcType=VARCHAR})
+
+    </insert>
+
+
+</mapper>

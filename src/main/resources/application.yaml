@@ -1,0 +1,42 @@
+
+fdfs:
+  url: http://106.12.27.169:8099/
+  soTimeout: 1501
+  thumbImage:
+    width: 150
+    height: 150
+  connectTimeout: 691
+  trackerList:
+    - 106.12.27.169:22122
+server:
+  port: 8172
+
+datasource:
+  config:
+    main:
+      url : jdbc:postgresql://106.12.27.169:5432/chen?useSSL=false
+      username : postgres
+      password: czc85310085
+      driver-class-name: org.postgresql.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+      filters: stat
+      maxActive: 100
+      initialSize: 20
+      maxWait: 60000
+      minIdle: 10
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+spring:
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
