@@ -4,6 +4,6 @@ RUN mkdir -p /var/fastdfs \
  && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
  && echo "Asia/Shanghai" > /etc/timezone
 COPY target/*.jar /var/fastdfs/app.jar
-WORKDIR /var/botgo
+WORKDIR /var/fastdfs
 ENTRYPOINT ["java","-jar","app.jar"]
 EXPOSE 8172:8172
