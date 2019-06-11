@@ -1,4 +1,4 @@
-FROM airdock/oracle-jdk
+FROM docker.io/errordeveloper/oracle-jdk
 MAINTAINER chenzhangchao George_SDK@163.com
 RUN mkdir -p /var/fastdfs \
  && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
